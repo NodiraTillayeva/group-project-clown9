@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateSiteUsersTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('site__users', function (Blueprint $table) {
+            $table->id();
+            $table->string('Username')->unique();
+            $table->string('FullName');
+            $table->string('Password');
+            $table->date('DateOfBirth');
+            $table->integer('PostalCode');
+            $table->string('City');
+            $table->integer('PhoneNumber');
+            $table->string('email');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('site__users');
+    }
+}
