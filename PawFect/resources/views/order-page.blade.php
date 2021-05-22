@@ -46,7 +46,7 @@
     <div class="row py-5">
       <div class="col-lg-4">
         <div class="card mb-1 p-2 text-center">
-          <img src="{{ URL::asset('assets/products/gal1.png') }}" class="img-fluid mb-3" alt="">
+          <img src="{{ $PostDetails->PhotoPath}}" class="img-fluid mb-3" alt="">
           <input type="button" value="See"  >
 
           <h5> {{ $PostDetails->PostName }} </h5>
@@ -101,7 +101,7 @@
 
   </div>
 
-
+  </div>
 </section>
 
 

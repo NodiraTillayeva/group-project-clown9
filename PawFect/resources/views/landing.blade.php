@@ -34,13 +34,13 @@
                     <a class="nav-link pr-5" aria-current="page" href="#">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link pr-5" href="#products">Products</a>
+                    <a class="nav-link pr-5" href="{{ route('landing-pets'). '#products' }}">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link pr-5" href="#categories">Categories</a>
+                    <a class="nav-link pr-5" href="{{ route('landing-pets'). '#categories' }}">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link pr-5" href="#sellOffer">Sell</a>
+                    <a class="nav-link pr-5" href="{{ route('landing-pets'). '#sellOffer' }}">Sell</a>
                 </li>
             </ul>
         </div>
@@ -100,7 +100,7 @@
                 @foreach($PostPet as $pet)
                 <div class="col-lg-3">
                     <div class="card mb-2 text-center">
-                        <img src=" {{ URL::asset('assets/products/gal1.png') }} " class="img-fluid mb-3" alt="">
+                        <img src=" {{ $pet->PhotoPath }} " class="img-fluid mb-3" alt="">
                         <a href="{{route('post-detail-pets',$pet->id)}}"> <input type="button" value="Details">   </a>
                         <h5>  {{ $pet->PostName }} </h5>
                         <p class="mb-2"><small>  {{$pet->Price }}</small></p>

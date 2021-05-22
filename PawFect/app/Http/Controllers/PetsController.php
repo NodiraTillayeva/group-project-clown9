@@ -14,7 +14,7 @@ class PetsController extends Controller
 
         $pets = new SitePosts;
 /*
-            $pets->id = 11;
+            $pets->id = 2;
             $pets->Price = 200;
             $pets->SiteUsers_id =3;
             $pets->PostName = "hedgehog sell for free";
