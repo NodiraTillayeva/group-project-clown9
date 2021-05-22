@@ -1,0 +1,99 @@
+Index: PawFect/app/Models/Site_Users.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/PawFect/app/Models/Site_Users.php b/PawFect/app/Models/SiteUsers.php
+rename from PawFect/app/Models/Site_Users.php
+rename to PawFect/app/Models/SiteUsers.php
+--- a/PawFect/app/Models/Site_Users.php	(revision d87cbe003c790e863da09ee60a74055fa898b437)
++++ b/PawFect/app/Models/SiteUsers.php	(date 1621668812669)
+@@ -5,7 +5,7 @@
+ use Illuminate\Database\Eloquent\Factories\HasFactory;
+ use Illuminate\Database\Eloquent\Model;
+ 
+-class Site_Users extends Model
++class SiteUsers extends Model
+ {
+     use HasFactory;
+ }
+Index: PawFect/database/migrations/2021_05_21_145418_create_site__users_table.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/PawFect/database/migrations/2021_05_21_145418_create_site__users_table.php b/PawFect/database/migrations/2021_05_22_073333_create_site_users_table.php
+rename from PawFect/database/migrations/2021_05_21_145418_create_site__users_table.php
+rename to PawFect/database/migrations/2021_05_22_073333_create_site_users_table.php
+--- a/PawFect/database/migrations/2021_05_21_145418_create_site__users_table.php	(revision d87cbe003c790e863da09ee60a74055fa898b437)
++++ b/PawFect/database/migrations/2021_05_22_073333_create_site_users_table.php	(date 1621668977711)
+@@ -13,9 +13,9 @@
+      */
+     public function up()
+     {
+-        Schema::create('site__users', function (Blueprint $table) {
++        Schema::create('site_users', function (Blueprint $table) {
+             $table->id();
+-            $table->string('Username')->unique();
++            $table->string('Username');
+             $table->string('FullName');
+             $table->string('Password');
+             $table->date('DateOfBirth');
+@@ -23,6 +23,9 @@
+             $table->string('City');
+             $table->integer('PhoneNumber');
+             $table->string('email');
++            $table->string('Passport');
++            $table->string('PhotoPath');
++
+             $table->timestamps();
+         });
+     }
+@@ -34,6 +37,6 @@
+      */
+     public function down()
+     {
+-        Schema::dropIfExists('site__users');
++        Schema::dropIfExists('site_users');
+     }
+ }
+Index: PawFect/database/migrations/2021_05_22_073528_create_site_posts_table.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nuse Illuminate\\Database\\Migrations\\Migration;\r\nuse Illuminate\\Database\\Schema\\Blueprint;\r\nuse Illuminate\\Support\\Facades\\Schema;\r\n\r\nclass CreateSitePetsTable extends Migration\r\n{\r\n    /**\r\n     * Run the migrations.\r\n     *\r\n     * @return void\r\n     */\r\n    public function up()\r\n    {\r\n        Schema::create('site__pets', function (Blueprint $table) {\r\n            $table->id('Pet_id');\r\n            $table->string('PostName');\r\n            $table->string('Type');\r\n            $table->string('Breed');\r\n            $table->integer('Age');\r\n            $table->integer('Price');\r\n            $table->text('Description');\r\n            $table->string('PhotoPath');\r\n            $table->timestamps();\r\n        });\r\n    }\r\n\r\n    /**\r\n     * Reverse the migrations.\r\n     *\r\n     * @return void\r\n     */\r\n    public function down()\r\n    {\r\n        Schema::dropIfExists('site__pets');\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/PawFect/database/migrations/2021_05_22_073528_create_site_posts_table.php b/PawFect/database/migrations/2021_05_22_073528_create_site_posts_table.php
+--- a/PawFect/database/migrations/2021_05_22_073528_create_site_posts_table.php	(revision d87cbe003c790e863da09ee60a74055fa898b437)
++++ b/PawFect/database/migrations/2021_05_22_073528_create_site_posts_table.php	(date 1621669776034)
+@@ -4,7 +4,7 @@
+ use Illuminate\Database\Schema\Blueprint;
+ use Illuminate\Support\Facades\Schema;
+ 
+-class CreateSitePetsTable extends Migration
++class CreateSitePostsTable extends Migration
+ {
+     /**
+      * Run the migrations.
+@@ -13,8 +13,10 @@
+      */
+     public function up()
+     {
+-        Schema::create('site__pets', function (Blueprint $table) {
+-            $table->id('Pet_id');
++        Schema::create('site_posts', function (Blueprint $table) {
++            $table->id();
++            $table->unsignedBigInteger('SiteUsers_id');
++            $table->foreign('SiteUsers_id')->references('id')->on('site_users');
+             $table->string('PostName');
+             $table->string('Type');
+             $table->string('Breed');
+@@ -33,6 +35,6 @@
+      */
+     public function down()
+     {
+-        Schema::dropIfExists('site__pets');
++        Schema::dropIfExists('site_posts');
+     }
+ }

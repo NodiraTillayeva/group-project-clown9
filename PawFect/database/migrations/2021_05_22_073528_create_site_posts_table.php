@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSitePetsTable extends Migration
+class CreateSitePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateSitePetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('site__pets', function (Blueprint $table) {
-            $table->id('Pet_id');
+        Schema::create('site_posts', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('SiteUsers_id');
+            $table->foreign('SiteUsers_id')->references('id')->on('site_users');
             $table->string('PostName');
             $table->string('Type');
             $table->string('Breed');
@@ -33,6 +35,6 @@ class CreateSitePetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site__pets');
+        Schema::dropIfExists('site_posts');
     }
 }

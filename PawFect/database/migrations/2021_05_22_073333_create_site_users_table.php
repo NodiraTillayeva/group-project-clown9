@@ -13,9 +13,9 @@ class CreateSiteUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('site__users', function (Blueprint $table) {
+        Schema::create('site_users', function (Blueprint $table) {
             $table->id();
-            $table->string('Username')->unique();
+            $table->string('Username');
             $table->string('FullName');
             $table->string('Password');
             $table->date('DateOfBirth');
@@ -23,6 +23,9 @@ class CreateSiteUsersTable extends Migration
             $table->string('City');
             $table->integer('PhoneNumber');
             $table->string('email');
+            $table->string('Passport');
+            $table->string('PhotoPath');
+
             $table->timestamps();
         });
     }
@@ -34,6 +37,6 @@ class CreateSiteUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site__users');
+        Schema::dropIfExists('site_users');
     }
 }
