@@ -252,3 +252,18 @@ h6
 	 background-color: #123A25;
 	 transition: 0.5s;
 }
+
+.btn-primary
+{
+ background-color: #F1A93D;
+ border-radius: 10px;
+ border-color: #F1A93D;
+}
+
+.btn-primary:hover
+{
+ background-color: #123A25;
+ transition: 0.5s;
+ border-color: #123A25;
+}
+
