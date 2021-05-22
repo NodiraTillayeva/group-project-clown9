@@ -2,38 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4d0f22d-2b8d-4cd3-8669-cde505e076cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/LogInBg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/catdogsad.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/parallex.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/products/gal1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/products/gal2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/products/gal3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/products/gal4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/products/gal5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/products/gal6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/profileavatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/wallpapers/Car1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/wallpapers/Car2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/wallpapers/Car3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edit-profile-favorites.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edit-profile-shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/edit-profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/landing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LogInBg.png" beforeDir="false" afterPath="$PROJECT_DIR$/LogInBg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawFect/resources/views/login-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawFect/resources/views/signup-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawFect/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/PawFect/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawFect/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/PawFect/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawFect/app/Models/Site_Pets.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawFect/app/Models/Site_Users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawFect/app/Models/site_favourites.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawFect/database/migrations/2021_05_21_145418_create_site__users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawFect/database/migrations/2021_05_21_154212_create_site__pets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PawFect/database/migrations/2021_05_21_175118_create_site_favourites_table.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/PawFect/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -159,7 +141,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/PawFect/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PawFect/artisan" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -168,6 +150,16 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Books\2Course\Spring\Internet Programming\project\PawFect\group-project-clown9\PawFect\resources" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/PawFect/artisan" scriptParameters="serve">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.3" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -178,6 +170,8 @@
       <option name="presentableId" value="Default" />
       <updated>1621588995357</updated>
       <workItem from="1621589000722" duration="3794000" />
+      <workItem from="1621622570159" duration="561000" />
+      <workItem from="1621665906561" duration="4064000" />
     </task>
     <servers />
   </component>
@@ -194,5 +188,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
