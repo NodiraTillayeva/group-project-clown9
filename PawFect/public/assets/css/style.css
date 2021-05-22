@@ -1,0 +1,254 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: montserrat;
+	font-weight: 400;
+}
+.nav-link
+{
+	color: #123A25;
+	font-family: montserrat;
+	font-weight: 400;
+	font-size: 25px;
+}
+
+.nav-link:hover
+{
+	color: #F1A93D;
+	font-family: montserrat;
+	font-weight: 400;
+	font-size: 25px;
+}
+.navbar-brand
+{
+	font-family: montserrat;
+	color: #123A25;
+	font-size: 35px;
+
+}
+.navbar-brand:hover
+{
+	font-family: montserrat;
+	color: #F1A93D;
+	font-size: 35px;
+
+}
+
+.btn1
+      {
+        border: none;
+        margin-bottom: 5px;
+        font-family: montserrat;
+        font-weight: 400;
+        outline: none;
+        height: 60px;
+        width: 50%;
+        background-color: #F1A93D;
+        color: white;
+        border-radius: 18px;
+      }
+.btn2
+      {
+        border: none;
+        margin-bottom: 5px;
+        font-family: montserrat;
+        font-weight: 400;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        background-color: #F1A93D;
+        color: white;
+        border-radius: 15px;
+      }
+.btn1:hover
+      {
+         background-color: #123A25;
+	 		transition: 0.5s;
+      }
+.btnSaveUnlikes:hover
+      {
+         background-color: #123A25;
+	 		transition: 0.5s;
+      }
+
+.btnorder:hover
+      {
+         background-color: #123A25;
+	 		transition: 0.5s;
+      }
+
+p, h4
+{
+	font-family: montserrat;
+	font-weight: 400;
+
+}
+
+h1
+{
+	font-family: Montserrat;
+	font-weight: 500;
+	color: #123A25;
+}
+.products input
+{
+	font-family: Montserrat;
+	font-weight: 400;
+	position: absolute;
+	height: 45px;
+	width: 110px;
+	background-color: #F1A93D ;
+	color: white;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	text-align: center;
+	top: 30%;
+	left: 30%;
+	opacity: 0;
+}
+
+.products .card:hover input
+{
+	opacity: 1;
+	transition: 1s;
+}
+
+.products input:hover
+{
+	 background-color: #123A25;
+	 transition: 0.5s;
+}
+
+.parallex, .profileParallex
+{
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(resources/assets/parallex.png)no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	width: 100%;
+
+}
+
+.parallex h1, .profileParallex h1
+{
+	font-size: 55px;
+	font-family: Montserrat;
+	font-weight: 600;
+}
+
+.parallex p, .profileParallex p
+{
+	font-size: 20px;
+	font-family: Montserrat;
+	font-weight: 400;
+}
+
+.categories .card
+{
+	border: none;
+}
+
+.avatar
+{
+	width: 150px;
+	height: 150px;
+}
+
+p
+{
+	padding: 0;
+	margin: 0;
+}
+
+h6
+{
+	font-size: 15px;
+	font-family: Montserrat;
+	font-weight: 400;
+	color: white;
+}
+.chooseavatar
+{
+	width: 150px;
+	height: 150px;
+
+}
+
+.btnorder, .btnSaveUnlikes
+{
+        border: none;
+        padding: 0;
+        align-self: center;
+        align-items: center;
+        margin-bottom: 5px;
+        font-family: montserrat;
+        font-weight: 400;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        background-color: #F1A93D;
+        color: white;
+        border-radius: 15px;
+
+}
+
+.orderdetails input
+{
+	font-family: Montserrat;
+	font-weight: 400;
+	position: absolute;
+	height: 45px;
+	width: 110px;
+	background-color: #F1A93D ;
+	color: white;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	text-align: center;
+	top: 30%;
+	left: 30%;
+	opacity: 0;
+}
+
+.orderdetails .card:hover input
+{
+	opacity: 1;
+	transition: 1s;
+}
+
+.orderdetails input:hover
+{
+	 background-color: #123A25;
+	 transition: 0.5s;
+}
+
+.favorites input
+{
+	font-family: Montserrat;
+	font-weight: 400;
+	position: absolute;
+	height: 45px;
+	width: 110px;
+	background-color: #F1A93D ;
+	color: white;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	text-align: center;
+	top: 30%;
+	left: 32%;
+	opacity: 0;
+}
+
+.favorites .card:hover input
+{
+	opacity: 1;
+	transition: 1s;
+}
+
+.favorites input:hover
+{
+	 background-color: #123A25;
+	 transition: 0.5s;
+}

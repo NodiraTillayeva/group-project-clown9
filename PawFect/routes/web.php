@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PetsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PetsController::class,'showAllPets'])->name("landing-pets");
+Route::get('/order{id}', [PetsController::class,'showPostDetail'])->name("post-detail-pets");
+Route::get('/catgories={categories}' , [PetsController::class,'sortByCategory'])->name("sort-post");
