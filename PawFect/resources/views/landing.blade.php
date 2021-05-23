@@ -1,11 +1,8 @@
 @extends('layouts.landing_layout')
 @section('content')
-
 <section class="products" id="products">
     <div class="container py-5">
         <h1 class="text-center"> Shop </h1>
-
-
 
             <div class="row py-5">
                 @foreach($PostPet as $pet)
@@ -20,12 +17,6 @@
 
         @endforeach
             </div>
-
-
-
-
-
-
 
 </div>
 </section>

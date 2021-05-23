@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!--  CSS File -->
-    <link rel="stylesheet" href="./style.css" >
+    <link  href=" {{ URL::asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
 
     <!--  Font -->
     <script src="https://kit.fontawesome.com/f4480f95c7.js" crossorigin="anonymous"></script>
@@ -63,9 +63,6 @@
                         <input type="file" class="img-fluid mb-3" accept="image/*">
                     </div>
                 </div>
-                <div>
-                    <input type="file" accept="image/*" >
-                </div>
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="card mb-1 p-2 text-center">
@@ -82,7 +79,20 @@
                     <div class="row py-1">
                         <div class="card mb-1  p-2 text-center">
                             <h5> Type </h5>
-                            <input type="text" name="Type" placeholder="African clown" class="form-control text-center" >
+                            <select name="Type" class="form-control text-center">
+                                <option value="cat">Cat</option>
+                                <option value="dog">Dog</option>
+                                <option value="rabbit">Rabbit</option>
+                                <option value="hedgehog">Hedgehog</option>
+                                <option value="turtle">Turtle</option>
+                                <option value="chicken">Chicken</option>
+                                <option value="hamster">Hamster</option>
+                                <option value="parrot">Parrot</option>
+                                <option value="fish">Fish</option>
+                                <option value="reptile">Reprile</option>
+                                <option value="pig">Pig</option>
+                                <option value="others">Others</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row py-1">

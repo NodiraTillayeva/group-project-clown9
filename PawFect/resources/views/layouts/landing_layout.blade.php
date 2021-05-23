@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link pr-5" aria-current="page" href="#">Profile</a>
+                    <a class="nav-link pr-5" aria-current="page" href="{{route('/profile',3)}}">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link pr-5" href="{{ route('landing-pets'). '#products' }}">Products</a>
@@ -59,15 +59,15 @@
         <div class="carousel-item active">
             <img src="{{ URL::asset('assets/wallpapers/Car1.png')}} " class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h4> Add anuouncements about pets </h4>
+                <h4> Add announcements about pets </h4>
                 <p>Some representative placeholder content for the first slide.</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="{{URL::asset('assets/wallpapers/Car2.png')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h4> Add anuouncements about pets </h4>
-                <p>Some representative placeholder content for the second slide.</p>
+                <h4> Add announcements about pets </h4>
+                <p>Let animals become your best friend.</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -89,7 +89,6 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-<br/>
 <nav class="navbar navbar-light bg-light">
     <form method="post" action="/products/search" class="container-fluid">
         @csrf
@@ -192,7 +191,9 @@
             <div class="col-lg-9 mx-auto">
                 <h1 class="text-white"> Sell pets if you found/have any </h1>
                 <p class="py-3"> BLakjhkfh kjsadhgfksdj aksdjfghkadjfgh kasjdhgfkajsdhg aksdjhgfkdg</p>
-                <button class="btn1 mr-1"> Add Anouncement </button>
+                <form action="/post">
+                    <button class="btn1 mr-1" type="submit" > Add Anouncement </button>
+                </form>
             </div>
         </div>
     </div>
