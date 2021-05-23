@@ -8,7 +8,27 @@ use App\Models\SitePosts;
 
 class PetsController extends Controller
 {
+    public function searchForPet(Request $request)
+    {
 
+        $PetName=$request->get('searchPetForUser');
+        //$Pets = SitePosts::all();
+
+        $Posts = SitePosts::where('PostName', 'LIKE',"$PetName%")->get();
+        //print $UsersPosts;
+        if($Posts == '[]')
+        {
+            return view('landing_notFound');
+        }
+        /*return URL::signedRoute('Admin.admin_static', ['searchTag' => $UsrName], [
+            'UsersPosts' =>  $UsersPosts,
+            'UsersPets' => $UsersPets
+        ]);*/
+        return view('landing', [
+            //'UsersPosts' =>  $Pets,
+            'PostPet' => $Posts
+        ]);
+    }
     public function showAllPets()
     {
 
