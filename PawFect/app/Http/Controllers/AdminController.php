@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 class AdminController extends Controller
 {
+    public function showDetailsToAdmin($id)
+    {
+        $pets= SitePosts::find($id);
+        $user = SiteUsers::find($pets->SiteUsers_id);
+
+
+        return view("Admin.details",['PostDetails'=>$pets , 'user'=>$user->Username,'phone'=>$user->PhoneNumber]);
+    }
     public function showSearch(Request $request)
     {
 

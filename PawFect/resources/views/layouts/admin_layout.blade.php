@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!--  CSS File -->
-    <link rel="stylesheet" href="CSS/style.css" >
+    <link rel="stylesheet" href="/CSS/style.css" >
 
     <!--  Font -->
     <script src="https://kit.fontawesome.com/f4480f95c7.js" crossorigin="anonymous"></script>

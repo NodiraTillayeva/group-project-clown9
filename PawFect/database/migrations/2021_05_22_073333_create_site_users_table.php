@@ -15,6 +15,7 @@ class CreateSiteUsersTable extends Migration
     {
         Schema::create('site_users', function (Blueprint $table) {
             $table->id();
+
             $table->string('Username');
             $table->string('FullName');
             $table->string('Password');

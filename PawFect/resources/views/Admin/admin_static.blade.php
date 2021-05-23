@@ -72,6 +72,7 @@
                             <div class="col-lg-3">
                                 <div class="card mb-1 text-center">
                                     <img src="{{$pet['PhotoPath']}}" class="img-fluid mb-3" alt="">
+                                    <a href="{{route('admin-detail-pets',$pet->id)}}"> <input type="button" value="Details">   </a>
                                     <form method="post" action="admin/delete">
                                         @csrf
                                         <input name="UsrID" type="hidden" value="{{$pet['id']}}"/>
