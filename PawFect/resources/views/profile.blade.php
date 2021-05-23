@@ -93,6 +93,7 @@
 
         </div>
         </div>
+
             <a href="{{route('edit-profile',3)}}"> <button class="btn2 m-0">Edit Info</button></a>
         </div>
 </section>

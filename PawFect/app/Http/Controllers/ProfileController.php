@@ -4,8 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\SitePosts;
 use App\Models\SiteUsers;
+use Illuminate\Auth\Authenticatable;
 use Illuminate\Http\Request;
-
+//use Illuminate\Http\Request;
+//use App\Models\SiteUsers;
+use App\Http\Controllers\Controller;
+//se App\Web\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 class ProfileController extends Controller
 {
     public function displayProfile($id){
