@@ -24,5 +24,6 @@ Route::get('/landing',[PetsController::class,'showAllPets']);
 Route::get('/profile{id}',[\App\Http\Controllers\ProfileController::class,'displayProfile'])->name('/profile');
 Route::get('/displayEditProfile{id}',[\App\Http\Controllers\ProfileController::class,'displayEditProfile'])->name('edit-profile');
 Route::post('/editProfile{id}',[\App\Http\Controllers\ProfileController::class, 'editProfileFunc'])->name('editProfile');
+Route::get('/editPost',[\App\Http\Controllers\EditPostController::class, 'displayEditPost'])->name('/editPost');
 
 //Route::get('/Products.#categories')->name("categories-jump");

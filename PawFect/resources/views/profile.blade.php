@@ -98,44 +98,25 @@
 </section>
 
 <section class="products">
+    <form action="/editPost">
     <div class="container py-2">
         <h1 class="text-center"> This person is selling </h1>
         <div class="row py-5">
+            @foreach($PostDetails as $posts)
             <div class="col-lg-3">
                 <div class="card mb-1 text-center">
                     <img src="assets/products/gal1.png" class="img-fluid mb-3" alt="">
-                    <input type="button" value="Edit"  >
-                    <h5> Name </h5>
-                    <p class="mb-2"><small> Price</small></p>
+                    <input type="submit" value="Edit"  >
+                    <h5> {{$posts->PostName}} </h5>
+                    <p class="mb-2"><small> {{$posts->Price}}</small></p>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="card mb-1 text-center">
-                    <img src="assets/products/gal2.png" class="img-fluid mb-3" alt="">
-                    <input type="button" value="Edit"  >
-                    <h5> Name </h5>
-                    <p class="mb-2"><small> Price</small></p>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card mb-1 text-center">
-                    <img src="assets/products/gal3.png" class="img-fluid mb-3" alt="">
-                    <input type="button" value="Edit"  >
-                    <h5> Name </h5>
-                    <p class="mb-2"><small> Price</small></p>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="card mb-1 text-center">
-                    <img src="assets/products/gal4.png" class="img-fluid mb-3" alt="">
-                    <input type="button" value="Edit"  >
-                    <h5> Name </h5>
-                    <p class="mb-2"><small> Price</small></p>
-                </div>
-            </div>
-        </div>
-        <button class="btn2 m-0  mb-3"> Delete Some </button>
+            @endforeach
+
+       <!-- <button class="btn2 m-0  mb-3"> Delete Some </button> -->
     </div>
+    </div>
+    </form>
 </section>
 
 

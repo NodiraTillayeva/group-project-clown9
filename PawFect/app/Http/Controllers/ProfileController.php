@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SitePosts;
 use App\Models\SiteUsers;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,9 @@ class ProfileController extends Controller
 {
     public function displayProfile($id){
         $user = SiteUsers::find($id);
-        return view('profile',['usersdata'=>$user]);
+        $pets= SitePosts::where('SiteUsers_id',$id)->get();
+
+        return view('profile',['usersdata'=>$user,'PostDetails'=>$pets]);
     }
     public function editProfileFunc(Request $req,$id){
         $user = SiteUsers::find($id);

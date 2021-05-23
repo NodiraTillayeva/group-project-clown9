@@ -59,15 +59,15 @@
         <div class="carousel-item active">
             <img src="{{ URL::asset('assets/wallpapers/Car1.png')}} " class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h4> Add anuouncements about pets </h4>
+                <h4> Add announcements about pets </h4>
                 <p>Some representative placeholder content for the first slide.</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="{{URL::asset('assets/wallpapers/Car2.png')}}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h4> Add anuouncements about pets </h4>
-                <p>Some representative placeholder content for the second slide.</p>
+                <h4> Add announcements about pets </h4>
+                <p>Let animals become your best friend.</p>
             </div>
         </div>
         <div class="carousel-item">
