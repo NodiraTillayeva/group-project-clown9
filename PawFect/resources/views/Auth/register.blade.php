@@ -90,20 +90,21 @@
                 <h1>Sign Up</h1>
                 <form method="post" action="{{route('user.registration')}}">
                     @csrf
+                    <input name="PhotoPath" type="hidden" value="/assets/profileavatar.png"/>
                     <div class="form-row">
                         <div class="col-lg-9 ">
                             <p> Already have an account? <a href="{{route('user.login')}}">Log In </a></p>
-                            <input type="text" placeholder="Full Name" class="form-control my-1 p-1" name="fullName">
+                            <input type="text" placeholder="Full Name" class="form-control my-1 p-1" name="FullName">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-9 ">
-                            <input type="text" placeholder="Date of Birth" class="form-control my-1 p-1" name="dateOfBirth">
+                            <input type="text" placeholder="Date of Birth" class="form-control my-1 p-1" name="DateOfBirth">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-9 ">
-                            <input type="text" placeholder="Username" class="form-control my-1 p-1"  name="userName">
+                            <input type="text" placeholder="Username" class="form-control my-1 p-1"  name="Username">
                         </div>
                     </div>
                     <div class="form-row">
@@ -113,7 +114,7 @@
                     </div>
                     <div class="form-row">
                         <div class="col-lg-9 ">
-                            <input type="tel" placeholder="Phone Number" class="form-control my-1 p-1"  name="phone">
+                            <input type="tel" placeholder="Phone Number" class="form-control my-1 p-1"  name="PhoneNumber">
                         </div>
                     </div>
                     <div class="form-row">
@@ -121,7 +122,7 @@
                     </div>
                     <div class="form-row">
                         <div class="col-lg-9 ">
-                            <select class="form-select  p-1" aria-label=".form-select-lg example" name="cityName">
+                            <select class="form-select  p-1" aria-label=".form-select-lg example" name="City">
                                 <option selected>Choose your region</option>
                                 <option value="Andijan">Andijan</option>
                                 <option value="Bukhara">Bukhara</option>
@@ -141,16 +142,16 @@
                         </div>
                         <div class="row  my-1 ">
                             <div class="col-6 col-sm-4 ">
-                                <input type="text" placeholder="Postal Code" class="form-control p-1 "  name="postalCode">
+                                <input type="text" placeholder="Postal Code" class="form-control p-1 "  name="PostalCode">
                             </div>
                             <div class="col-6 col-sm-5 ">
-                                <input type="text" placeholder="Passport Number" class="form-control p-1"  name="passportNumber">
+                                <input type="text" placeholder="Passport Number" class="form-control p-1"  name="Passport">
                             </div>
                         </div>
                     </div>
                     <div class="row my-1" >
                         <div class="col-6 col-sm-4">
-                            <input type="password" placeholder="*******" class="form-control p-1 " name="password">
+                            <input type="password" placeholder="*******" class="form-control p-1 " name="Password">
                         </div>
                         <div class="col-6 col-sm-5">
                             <input type="password" placeholder="*******" class="form-control p-1" name="confirm_password">

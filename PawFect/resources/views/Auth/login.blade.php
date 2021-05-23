@@ -7,13 +7,13 @@
                     <p> Dont have an account yet? <a href="{{route('user.registration')}}"> Sign Up</a></p>
                     <div class="form-row">
                         <div class="col-lg-8 ">
-                            <input type="email" placeholder="Email Address" class="form-control my-3 p-3" name="login_email" >
+                            <input type="email" placeholder="Email Address" class="form-control my-3 p-3" name="email" >
 
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-lg-8">
-                            <input type="password" placeholder="*******" class="form-control  my-3 p-3" name="login_password">
+                            <input type="password" placeholder="*******" class="form-control  my-3 p-3" name="Password">
                         </div>
                     </div>
                     <div class="form-row">

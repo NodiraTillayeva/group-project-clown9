@@ -16,11 +16,13 @@ use \App\Http\Controllers\AdminController;
 */
 
 Route::name('user.')->group(function(){
-    Route::view('/landing', 'private')->middleware('auth')->name('private');
-
+    Route::view('/landing', 'landing')->middleware('auth')->name('private');
+    Route::view('/landing',function (){
+        return view('landing');
+    })->name('landing');
     Route::get('/login', function(){
         if(Auth::check()){
-            return redirect(route('user.private'));
+            return redirect(route('user.landing'));
         }
         return view('Auth.login');
     })->name('login');
@@ -30,11 +32,11 @@ Route::name('user.')->group(function(){
     })->name('logout');
     Route::post('/login', [\App\Http\Controllers\RegisterController::class, 'login']);
 
-    Route::get('/logout', [])->name('logout');
+    //Route::get('/logout', [])->name('logout');
     Route::get('/registration', function (){
         return view('Auth.register');
     })->name('registration');
-
+    //Route::post('/login', [\App\Http\Controllers\RegisterController::class, '']);
     Route::post('/registration', [\App\Http\Controllers\RegisterController::class, 'save']);
 });
 //Route::get('/', [AdminController::class, 'addNewUser']);
@@ -52,7 +54,7 @@ Route::get('/post',function (){
             return view('announcement-page');
 });
 Route::post('/postform','App\Http\Controllers\PostController@submit')->name('post-form');
-Route::get('/landing',[PetsController::class,'showAllPets']);
+Route::get('/landing',[PetsController::class,'showAllPets'])->name('landing');
 Route::get('/profile{id}',[\App\Http\Controllers\ProfileController::class,'displayProfile'])->name('/profile');
 Route::get('/displayEditProfile{id}',[\App\Http\Controllers\ProfileController::class,'displayEditProfile'])->name('edit-profile');
 Route::post('/editProfile{id}',[\App\Http\Controllers\ProfileController::class, 'editProfileFunc'])->name('editProfile');

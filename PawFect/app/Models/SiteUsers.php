@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class SiteUsers extends Model
 {
+    /*public function user()
+    {
+        return $this->belongsTo(User::class);
+    }*/
     use HasFactory;
-    protected $fillable = ['Username','FullName','password','DateOfBirth','PostalCode','City', 'PhoneNumber','email','Passport'];
+    protected $fillable = ['Username','FullName','Password','DateOfBirth','PostalCode','City', 'PhoneNumber','email','Passport'];
 
 }
