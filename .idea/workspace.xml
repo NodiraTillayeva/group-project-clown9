@@ -4,10 +4,7 @@
     <list default="true" id="b4d0f22d-2b8d-4cd3-8669-cde505e076cc" name="Default Changelist" comment="changed site_users(SiteUsers) and site_pets(SitePosts), added foreign keys and some columns">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_05_2021_18_29__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_21_05_2021_18_29__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawFect/app/Http/Controllers/PetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/PawFect/app/Http/Controllers/PetsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PawFect/database/migrations/2021_05_22_073333_create_site_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/PawFect/database/migrations/2021_05_22_073333_create_site_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawFect/resources/views/landing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/PawFect/resources/views/landing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PawFect/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/PawFect/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/landing.html.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/order-page.html.php" beforeDir="false" />
     </list>
@@ -169,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621588995357</updated>
       <workItem from="1621589000722" duration="3794000" />
-      <workItem from="1621748851753" duration="25847000" />
+      <workItem from="1621748851753" duration="26502000" />
     </task>
     <servers />
   </component>

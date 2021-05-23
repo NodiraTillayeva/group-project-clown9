@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -32,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link pr-5" aria-current="page" href="{{route('/profile',3)}}">Profile</a>
+                    <a class="nav-link pr-5" aria-current="page" href="#">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link pr-5" href="{{ route('landing-pets'). '#products' }}">Products</a>
@@ -90,42 +89,18 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-
-
-@extends('layouts.landing_layout')
-@section('content')
-
-<section class="products" id="products">
-    <div class="container py-5">
-        <h1 class="text-center"> Shop </h1>
-
-
-
-            <div class="row py-5">
-                @foreach($PostPet as $pet)
-                <div class="col-lg-3">
-                    <div class="card mb-2 text-center">
-                        <img src=" {{ $pet->PhotoPath }} " class="img-fluid mb-3" alt="">
-                        <a href="{{route('post-detail-pets',$pet->id)}}"> <input type="button" value="Details">   </a>
-                        <h5>  {{ $pet->PostName }} </h5>
-                        <p class="mb-2"><small>  {{$pet->Price }}</small></p>
-                    </div>
-                </div>
-
-        @endforeach
-            </div>
-
-
-
-
-
-
-
-</div>
-</section>
-@endsection
-
-
+<br/>
+<nav class="navbar navbar-light bg-light">
+    <form method="post" action="/products/search" class="container-fluid">
+        @csrf
+        <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" name="searchPetForUser" class="form-control" placeholder="Pet" aria-label="Username" aria-describedby="basic-addon1">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </div>
+    </form>
+</nav>
+@yield('content')
 <section class="categories" id = "categories">
     <div class="container py-5">
         <h1 class="text-center"> Categories </h1>
@@ -138,7 +113,7 @@
             </div>
             <div class="col-lg-1">
                 <div class="card mb-1 text-center">
-                    <a href="{{ route('sort-post','dog') }}"><input type="image" src="https://img.icons8.com/flat-round/64/000000/dog--v1.png" class="img-fluid mb-3" alt="" value="dog"  ></a>
+                    <a href="{{ route('sort-post','dog') }}"><input type="image" src="https://img.icons8.com/flat-round/64/000000/dog--v1.png" class="img-fluid mb-3" alt="" value="Dog"  ></a>
                     <p><small> Dog</small></p>
                 </div>
             </div>
@@ -217,10 +192,7 @@
             <div class="col-lg-9 mx-auto">
                 <h1 class="text-white"> Sell pets if you found/have any </h1>
                 <p class="py-3"> BLakjhkfh kjsadhgfksdj aksdjfghkadjfgh kasjdhgfkajsdhg aksdjhgfkdg</p>
-                <form action="/post">
-                    <button class="btn1 mr-1" type="submit" > Add Anouncement </button>
-                </form>
-
+                <button class="btn1 mr-1"> Add Anouncement </button>
             </div>
         </div>
     </div>
@@ -244,4 +216,3 @@
 <script src="{{ URL::asset('https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js')}}" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
-
