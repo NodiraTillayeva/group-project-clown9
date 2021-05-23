@@ -15,7 +15,28 @@ use \App\Http\Controllers\AdminController;
 |
 */
 
+Route::name('user.')->group(function(){
+    Route::view('/landing', 'private')->middleware('auth')->name('private');
 
+    Route::get('/login', function(){
+        if(Auth::check()){
+            return redirect(route('user.private'));
+        }
+        return view('Auth.login');
+    })->name('login');
+    Route::get('/logout', function(){
+        Auth::logout();
+        return redirect('/login');
+    })->name('logout');
+    Route::post('/login', [\App\Http\Controllers\RegisterController::class, 'login']);
+
+    Route::get('/logout', [])->name('logout');
+    Route::get('/registration', function (){
+        return view('Auth.register');
+    })->name('registration');
+
+    Route::post('/registration', [\App\Http\Controllers\RegisterController::class, 'save']);
+});
 //Route::get('/', [AdminController::class, 'addNewUser']);
 Route::post('/admin/search', [AdminController::class, 'showSearch'])->name('searchForAdmin');
 Route::get('/admin', [AdminController::class, 'showUsers'])->name('showUsersToAdmin');
