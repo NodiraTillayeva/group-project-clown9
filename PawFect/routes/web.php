@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', [AdminController::class, 'addNewUser']);
+Route::post('/admin/search', [AdminController::class, 'showSearch'])->name('searchForAdmin');
+Route::get('/admin', [AdminController::class, 'showUsers'])->name('showUsersToAdmin');
+Route::post('admin/delete', [AdminController::class, 'deleteItem']);
+Route::get('/admin/not_found', [AdminController::class, 'firstOr']);
