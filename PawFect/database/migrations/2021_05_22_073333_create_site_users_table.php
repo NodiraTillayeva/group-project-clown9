@@ -25,7 +25,7 @@ class CreateSiteUsersTable extends Migration
             $table->string('PhoneNumber');
             $table->string('email');
             $table->string('Passport');
-            $table->string('PhotoPath');
+            $table->string('PhotoPath')->nullable('True');
 
             $table->timestamps();
         });

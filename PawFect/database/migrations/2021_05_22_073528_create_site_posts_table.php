@@ -23,7 +23,7 @@ class CreateSitePostsTable extends Migration
             $table->integer('Age');
             $table->integer('Price');
             $table->text('Description');
-            $table->string('PhotoPath');
+            $table->string('PhotoPath')->nullable('True');
             $table->timestamps();
         });
     }
