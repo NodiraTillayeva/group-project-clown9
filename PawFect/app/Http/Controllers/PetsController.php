@@ -13,22 +13,7 @@ class PetsController extends Controller
     {
 
         $pets = new SitePosts;
-/*
-            $pets->id = 2;
-            $pets->Price = 200;
-            $pets->SiteUsers_id =3;
-            $pets->PostName = "hedgehog sell for free";
-            $pets->Type = "hamster";
-            $pets->Breed = "SomeBreed";
-            $pets->Age = 500;
-            $pets->Description = "
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad adipisci atque
-blanditiis dicta dignissimos dolorum
-, earum eius fuga id impedit nesciunt nostrum nulla obcaecati odio rem, repudiandae sint soluta?";
-            $pets->PhotoPath = "assets/products/gal2";
 
-    $pets->save();
-*/
         return view("landing",['PostPet' => $pets->all()]);
     }
 
@@ -49,6 +34,5 @@ blanditiis dicta dignissimos dolorum
 
 
     }
-
 
 }

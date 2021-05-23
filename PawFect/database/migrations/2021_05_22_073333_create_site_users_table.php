@@ -19,10 +19,10 @@ class CreateSiteUsersTable extends Migration
             $table->string('Username');
             $table->string('FullName');
             $table->string('Password');
-            $table->date('DateOfBirth');
+            $table->string('DateOfBirth');
             $table->integer('PostalCode');
             $table->string('City');
-            $table->integer('PhoneNumber');
+            $table->string('PhoneNumber');
             $table->string('email');
             $table->string('Passport');
             $table->string('PhotoPath');

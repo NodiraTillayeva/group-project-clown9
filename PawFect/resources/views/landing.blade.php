@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link pr-5" aria-current="page" href="#">Profile</a>
+                    <a class="nav-link pr-5" aria-current="page" href="{{route('/profile',3)}}">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link pr-5" href="{{ route('landing-pets'). '#products' }}">Products</a>
@@ -115,6 +115,7 @@
 
 
 
+</div>
 </section>
 
 
@@ -131,7 +132,7 @@
             </div>
             <div class="col-lg-1">
                 <div class="card mb-1 text-center">
-                    <a href="{{ route('sort-post','dog') }}"><input type="image" src="https://img.icons8.com/flat-round/64/000000/dog--v1.png" class="img-fluid mb-3" alt="" value="Dog"  ></a>
+                    <a href="{{ route('sort-post','dog') }}"><input type="image" src="https://img.icons8.com/flat-round/64/000000/dog--v1.png" class="img-fluid mb-3" alt="" value="dog"  ></a>
                     <p><small> Dog</small></p>
                 </div>
             </div>
@@ -210,7 +211,10 @@
             <div class="col-lg-9 mx-auto">
                 <h1 class="text-white"> Sell pets if you found/have any </h1>
                 <p class="py-3"> BLakjhkfh kjsadhgfksdj aksdjfghkadjfgh kasjdhgfkajsdhg aksdjhgfkdg</p>
-                <button class="btn1 mr-1"> Add Anouncement </button>
+                <form action="/post">
+                    <button class="btn1 mr-1" type="submit" > Add Anouncement </button>
+                </form>
+
             </div>
         </div>
     </div>
